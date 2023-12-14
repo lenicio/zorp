@@ -8,6 +8,7 @@ if (!empty($_GET['nome']) && !empty($_GET['idade'])) {
     echo $nome . " Eh maior de idade!";
   } else {
     echo $nome . " Eh menor de idade!";
+    echo "Qualquer Alteração!";
   }
 }
 
