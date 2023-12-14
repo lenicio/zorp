@@ -1,42 +1,44 @@
 <?php
 
-if (!empty($_GET['nome']) && !empty($_GET['idade'])) {
-  $nome = $_GET['nome'];
-  $idade = intval($_GET['idade']);
+$cadastros = [
+  [
+    "nome" => "Lenício",
+    "idade" => 27,
+    "cidade" => "Uberlândia"
+  ],
+  [
+    "nome" => "João",
+    "idade" => 20,
+    "cidade" => "Uberlândia"
+  ],
+  [
+    "nome" => "Ana",
+    "idade" => 32,
+    "cidade" => "São Paulo"
+  ],
+  [
+    "nome" => "Beatriz",
+    "idade" => 24,
+    "cidade" => "Rio de Janeiro"
+  ],
+  [
+    "nome" => "Carlos",
+    "idade" => 35,
+    "cidade" => "Belo Horizonte"
+  ],
+  [
+    "nome" => "Juliana",
+    "idade" => 28,
+    "cidade" => "Curitiba"
+  ],
+  [
+    "nome" => "Eduardo",
+    "idade" => 22,
+    "cidade" => "Porto Alegre"
+  ]
+];
 
-  if ($idade >= 18) {
-    echo $nome . " Eh maior de idade!";
-  } else {
-    echo $nome . " Eh menor de idade!";
-    echo "Qualquer Alteração!";
-  }
+
+foreach ($cadastros as $cadastro) {
+  echo $cadastro["cidade"] . "<br>";
 }
-
-
-?>
-
-<!DOCTYPE html>
-<html lang="pt">
-
-<head>
-  <meta charset="UTF-8">
-  <title>Página Inicial</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-  <h1>Página Inicial</h1>
-  <form method="get" action="">
-    <label for="nome">Informe o seu nome: </label>
-    <input type="text" name="nome" id="nome" required>
-    <br>
-    <label for="idade">Informe sua idade: </label>
-    <input type="number" name="idade" id="idade" required>
-    <br>
-    <button type="submit">Enviar</button>
-  </form>
-
-</body>
-
-</html>
